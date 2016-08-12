@@ -1,9 +1,10 @@
 # 结构化互联网的非结构化数据，构建网页解析社区
 
 ### 数据定义：
-* 数据源：Start URLs
-* 数据项：Data Items
-* 元数据：Xpaths
+* 输入：Start URLs
+* 模型：
+ * 数据项：Data Items
+ * 元数据：Xpaths
 * 输出： File Format， Location （缺省为本地Json，可以配置为S3、DB等）
 
 
