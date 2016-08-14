@@ -7,12 +7,13 @@ import httplib
 #these two paras control listing result and amount for each post request
 current_page = 1
 records_paper_page = 50
-
+OpenHouseStartDate="08/14/2016"
+OpenHouseEndDate="08/26/2016"
 url1 = 'https://api2.realtor.ca/Listing.svc/PropertySearch_Post'
 params = {
     "CultureId": "1",
     "ApplicationId": "1",
-    "RecordsPerPage": "50",
+    "RecordsPerPage": records_paper_page,
     "MaximumResults": "9",
     "PropertySearchTypeId": "1",
     "PriceMin": "500000",
@@ -31,13 +32,13 @@ params = {
     "SortOrder": "A",
     "SortBy": "1",
     "OpenHouse": "1",
-    "OpenHouseStartDate": "08/14/2016",
-    "OpenHouseEndDate": "08/26/2016",
+    "OpenHouseStartDate": OpenHouseStartDate,
+    "OpenHouseEndDate": OpenHouseEndDate,
     "viewState": "l",
     "Longitude": "-122.64174005377839",
     "Latitude": "49.14514549678261",
     "ZoomLevel": "11",
-    "CurrentPage": "1",
+    "CurrentPage": current_page,
     "PropertyTypeGroupID": "1"
 }
 # Adding header
