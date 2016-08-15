@@ -63,10 +63,11 @@ result = json.loads(r.content)
 result =  result['Results']
 # print type(result)
 print len(result)
-f = open("result.txt","a+")
-for item in result:
-    for key,value in item.iteritems():
-        # if key == "Id":
-        #     print str(key) + ":" + str(value)
-        f.writelines(str(key) + ":" + str(value))
-f.close()
+import pprint
+
+pprint.pprint(result, indent=4)
+
+with open("RealtorAPI_Result.json", "a") as data_file:
+    json.dump(result, data_file)
+
+data_file.close()
